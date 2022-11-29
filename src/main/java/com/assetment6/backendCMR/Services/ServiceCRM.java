@@ -7,6 +7,8 @@ import com.assetment6.backendCMR.Entities.Users;
 public class ServiceCRM {
 
     private ArrayList<Users> user;
+
+    static int contUsers = 0;
     
     public ServiceCRM() {
         this.user = new ArrayList<>();
@@ -22,8 +24,11 @@ public class ServiceCRM {
         return login;
     }
 
-    public boolean createUser(int i, String string, String string2, String string3, String string4) {
-        return false;
+    public boolean createUser(String string, String string2, String string3, String string4) {
+        Users user1 = new Users(contUsers++, "Miguel", "migiorda", "usuario@solera.com", "bootcamp4");
+        if (user.contains(user1)) return false;
+        else user.add(user1);
+
+        return true;
     }
-    
 }

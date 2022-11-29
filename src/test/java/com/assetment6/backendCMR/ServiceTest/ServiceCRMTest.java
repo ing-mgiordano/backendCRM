@@ -22,7 +22,7 @@ public class ServiceCRMTest {
     @Test
     void userCreate_whenCalled_ReturnTrueIfUsearIsCreated() {
         service = new ServiceCRM();
-        boolean resultUserCreate = service.createUser(0, "Miguel", "migiorda", "usuario@solera.com", "bootcamp4");
+        boolean resultUserCreate = service.createUser("Miguel", "migiorda", "usuario@solera.com", "bootcamp4");
         assertEquals(true, resultUserCreate);
     }
 }
