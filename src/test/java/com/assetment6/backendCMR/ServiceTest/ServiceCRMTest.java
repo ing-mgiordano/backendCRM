@@ -18,4 +18,11 @@ public class ServiceCRMTest {
         boolean resultLogin = service.login("usuario@solera.com", "bootcamp4");
         assertEquals(true, resultLogin);
     }
+
+    @Test
+    void userCreate_whenCalled_ReturnTrueIfUsearIsCreated() {
+        service = new ServiceCRM();
+        boolean resultUserCreate = service.createUser(0, "Miguel", "migiorda", "usuario@solera.com", "bootcamp4");
+        assertEquals(true, resultUserCreate);
+    }
 }

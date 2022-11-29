@@ -21,5 +21,9 @@ public class ServiceCRM {
         }
         return login;
     }
+
+    public boolean createUser(int i, String string, String string2, String string3, String string4) {
+        return false;
+    }
     
 }
