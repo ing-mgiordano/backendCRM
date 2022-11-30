@@ -36,5 +36,9 @@ public class ServiceCRMTest {
         assertEquals(opList, service.showOpportunities());
     }
 
-    
+    @Test
+    void showClient_whenCalled_ReturnClientList() {
+        service = new ServiceCRM();
+        assertEquals(1, service.showClientList().size());
+    }
 }

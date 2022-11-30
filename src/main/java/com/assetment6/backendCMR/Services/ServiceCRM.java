@@ -46,4 +46,8 @@ public class ServiceCRM {
         }
         return opport;
     }
+
+    public ArrayList<OpportunitiesClient> showClientList() {
+        return null;
+    }
 }
