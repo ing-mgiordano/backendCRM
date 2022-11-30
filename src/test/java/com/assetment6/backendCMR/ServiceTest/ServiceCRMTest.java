@@ -35,4 +35,6 @@ public class ServiceCRMTest {
         ArrayList<OpportunitiesClient> opList = new ArrayList<>();
         assertEquals(opList, service.showOpportunities());
     }
+
+    
 }

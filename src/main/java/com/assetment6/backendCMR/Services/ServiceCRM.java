@@ -11,10 +11,13 @@ public class ServiceCRM {
     private ArrayList<OpportunitiesClient> opportClient;
 
     static int contUsers = 0;
+    static int contOppCli = 0;
     
     public ServiceCRM() {
         this.user = new ArrayList<>();
-        this.user.add(new Users(0, "Miguel", "migiorda", "usuario@solera.com", "bootcamp4"));
+        this.user.add(new Users(contUsers++, "Miguel", "migiorda", "usuario@solera.com", "bootcamp4"));
+        this.opportClient = new ArrayList<>();
+        this.opportClient.add( new OpportunitiesClient(contOppCli++, "Pepe", null, "ola@hola.com", "68686868", true, false, new ArrayList<>()));
     }
 
     public boolean login(String string, String string2) {
@@ -35,8 +38,12 @@ public class ServiceCRM {
     }
 
     public ArrayList<OpportunitiesClient> showOpportunities() {
-        opportClient = new ArrayList<>();
-        return opportClient;
+        ArrayList<OpportunitiesClient> opport = new ArrayList<>();
+        for (OpportunitiesClient opp: this.opportClient) {
+            if(!opp.getIsClient()) {
+                opport.add(opp);
+            }
+        }
+        return opport;
     }
-
 }
