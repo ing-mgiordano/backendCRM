@@ -17,7 +17,11 @@ public class ServiceCRM {
         this.user = new ArrayList<>();
         this.user.add(new Users(contUsers++, "Miguel", "migiorda", "usuario@solera.com", "bootcamp4"));
         this.opportClient = new ArrayList<>();
-        this.opportClient.add( new OpportunitiesClient(contOppCli++, "Pepe", null, "ola@hola.com", "68686868", true, false, new ArrayList<>()));
+        this.opportClient.add( new OpportunitiesClient(contOppCli++, "Pepe", "Rodriguez", "ola@hola.com", "68686868", true, false, new ArrayList<>(), "123456789"));
+        this.opportClient.add( new OpportunitiesClient(contOppCli++, "Pepe2", "Rodriguez2", "ola2@hola.com", "58686868", false, false, new ArrayList<>(), ""));
+        this.opportClient.add( new OpportunitiesClient(contOppCli++, "Pepe3", "Rodriguez3", "ola3@hola.com", "48686868", true, false, new ArrayList<>(), "987654321"));
+        this.opportClient.add( new OpportunitiesClient(contOppCli++, "Pepe4", "Rodriguez4", "ola4@hola.com", "78686868", false, false, new ArrayList<>(), ""));
+
     }
 
     public boolean login(String string, String string2) {
@@ -57,7 +61,17 @@ public class ServiceCRM {
         return client;
     }
 
-    public OpportunitiesClient createClient() {
+    public OpportunitiesClient createClient(int id) {
+        for(OpportunitiesClient opp: this.opportClient) {
+            if(id == opp.getId()) {
+                if(!opp.getIsClient()) {
+                    opp.setIsClient(true);
+                    return opp;
+                } else {
+                    return null;
+                }
+            }
+        }
         return null;
     }
 }

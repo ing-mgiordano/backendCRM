@@ -11,9 +11,10 @@ public class OpportunitiesClient {
     private Boolean isClient;
     private Boolean isDelete;
     private List<Contact> contacts;
+    private String taxCode;
     
     public OpportunitiesClient(int id, String name, String surname, String email, String num, Boolean isClient,
-            Boolean isDelete, List<Contact> contacts) {
+            Boolean isDelete, List<Contact> contacts, String taxCode) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -22,6 +23,7 @@ public class OpportunitiesClient {
         this.isClient = isClient;
         this.isDelete = isDelete;
         this.contacts = contacts;
+        this.taxCode = taxCode;
     }
 
     public OpportunitiesClient() {
@@ -92,10 +94,21 @@ public class OpportunitiesClient {
         this.contacts = contacts;
     }
 
+    
+        public String getTaxCode() {
+            return taxCode;
+        }
+    
+        public void setTaxCode(String taxCode) {
+            this.taxCode = taxCode;
+
+        }
+
     @Override
     public String toString() {
         return "OpportunitiesClient [id=" + id + ", name=" + name + ", surname=" + surname + ", email=" + email
-                + ", num=" + num + ", isClient=" + isClient + ", isDelete=" + isDelete + ", contacts=" + contacts + "]";
+                + ", num=" + num + ", isClient=" + isClient + ", isDelete=" + isDelete + ", contacts=" + contacts
+                + ", taxCode=" + taxCode + "]";
     }
 
 }

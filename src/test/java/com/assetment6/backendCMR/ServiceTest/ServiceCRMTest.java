@@ -1,11 +1,8 @@
 package com.assetment6.backendCMR.ServiceTest;
 
-import com.assetment6.backendCMR.Entities.OpportunitiesClient;
 import com.assetment6.backendCMR.Services.ServiceCRM;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -32,19 +29,18 @@ public class ServiceCRMTest {
     @Test
     void showOpportunities_whenCalled_ReturnOpportunitiesList() {
         service = new ServiceCRM();
-        ArrayList<OpportunitiesClient> opList = new ArrayList<>();
-        assertEquals(opList, service.showOpportunities());
+        assertEquals(2, service.showOpportunities().size());
     }
 
     @Test
     void showClient_whenCalled_ReturnClientList() {
         service = new ServiceCRM();
-        assertEquals(1, service.showClientList().size());
+        assertEquals(2, service.showClientList().size());
     }
 
     @Test 
     void createClient_whenCalled_changeIsClientFalseToTrue() {
         service = new ServiceCRM();
-        assertEquals(true, service.createClient().getIsClient());
+        assertEquals(true, service.createClient(2).getIsClient());
     }
 }
