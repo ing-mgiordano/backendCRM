@@ -35,7 +35,7 @@ public class ServiceCRM {
     }
 
     public ArrayList<OpportunitiesClient> showOpportunities() {
-        
+        opportClient = new ArrayList<>();
         return opportClient;
     }
 
