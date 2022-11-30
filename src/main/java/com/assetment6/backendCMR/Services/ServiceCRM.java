@@ -48,6 +48,16 @@ public class ServiceCRM {
     }
 
     public ArrayList<OpportunitiesClient> showClientList() {
+        ArrayList<OpportunitiesClient> client = new ArrayList<>();
+        for (OpportunitiesClient cli: this.opportClient) {
+            if(cli.getIsClient()) {
+                client.add(cli);
+            }
+        }
+        return client;
+    }
+
+    public OpportunitiesClient createClient() {
         return null;
     }
 }

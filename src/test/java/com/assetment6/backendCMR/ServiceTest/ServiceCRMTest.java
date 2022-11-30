@@ -41,4 +41,10 @@ public class ServiceCRMTest {
         service = new ServiceCRM();
         assertEquals(1, service.showClientList().size());
     }
+
+    @Test 
+    void createClient_whenCalled_changeIsClientFalseToTrue() {
+        service = new ServiceCRM();
+        assertEquals(true, service.createClient().getIsClient());
+    }
 }
