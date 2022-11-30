@@ -1,8 +1,11 @@
 package com.assetment6.backendCMR.ServiceTest;
 
+import com.assetment6.backendCMR.Entities.OpportunitiesClient;
 import com.assetment6.backendCMR.Services.ServiceCRM;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,5 +27,12 @@ public class ServiceCRMTest {
         service = new ServiceCRM();
         boolean resultUserCreate = service.createUser("Miguel", "migiorda", "usuario@solera.com", "bootcamp4");
         assertEquals(true, resultUserCreate);
+    }
+
+    @Test
+    void showOpportunities_whenCalled_ReturnOpportunitiesList() {
+        service = new ServiceCRM();
+        ArrayList<OpportunitiesClient> opList = new ArrayList<>();
+        assertEquals(opList, service.showOpportunities());
     }
 }

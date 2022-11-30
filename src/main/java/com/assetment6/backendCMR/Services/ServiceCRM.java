@@ -2,11 +2,13 @@ package com.assetment6.backendCMR.Services;
 
 import java.util.ArrayList;
 
+import com.assetment6.backendCMR.Entities.OpportunitiesClient;
 import com.assetment6.backendCMR.Entities.Users;
 
 public class ServiceCRM {
 
     private ArrayList<Users> user;
+    private ArrayList<OpportunitiesClient> opportClient;
 
     static int contUsers = 0;
     
@@ -31,4 +33,10 @@ public class ServiceCRM {
 
         return true;
     }
+
+    public ArrayList<OpportunitiesClient> showOpportunities() {
+        
+        return opportClient;
+    }
+
 }
