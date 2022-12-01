@@ -95,14 +95,14 @@ public class OpportunitiesClient {
     }
 
     
-        public String getTaxCode() {
-            return taxCode;
-        }
+    public String getTaxCode() {
+        return taxCode;
+    }
     
-        public void setTaxCode(String taxCode) {
-            this.taxCode = taxCode;
+    public void setTaxCode(String taxCode) {
+        this.taxCode = taxCode;
 
-        }
+    }
 
     @Override
     public String toString() {
