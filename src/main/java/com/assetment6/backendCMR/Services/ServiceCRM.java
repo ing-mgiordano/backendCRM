@@ -12,13 +12,14 @@ import com.assetment6.backendCMR.Entities.Users;
 @Component
 public class ServiceCRM {
 
-    private ArrayList<Users> user;
-    private ArrayList<OpportunitiesClient> opportClient;
+    private ArrayList<Users> user; //list of authorized users for login
+    private ArrayList<OpportunitiesClient> opportClient; //list of opportunities and clients
+
 
     static int contUsers = 0;
     static int contOppCli = 0;
     static int contContac = 0;
-    private Random r;
+    private Random r; //taxcode generator
     
     
     public ServiceCRM() {
